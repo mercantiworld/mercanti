@@ -38,9 +38,6 @@
   &.overlay-2:before {
     background: rgba(#000, 0.4);
   }
-  &.overlay-light:before {
-    background: rgba(#fff, 0.8);
-  }
 
   .bg-video {
     position: absolute;
@@ -62,32 +59,11 @@
   }
 }
 
-//- Gradient
+//- testimonial background
 
-
+.bg-light-gradient {
+  background: linear-gradient(180deg, rgba(236, 240, 253, 0) 0%, rgba(236, 240, 253, 0.53) 14.32%, #ECF0FD 45.83%, rgba(236, 240, 253, 0.43) 84.33%, rgba(236, 240, 253, 0) 100%);
+}
 .bg-primary-gradient{
   background: linear-gradient(208.18deg, #51B4F7 9.05%, #5A98F2 76.74%);
-}
-
-.bg-dark-gradient {
-  background: linear-gradient(0deg, rgba(10, 9, 13, 0.8), rgba(10, 9, 13, 0.8));
-}
-
-.bg-light-gradient{
-  background: linear-gradient(181deg, rgba(113, 110, 110, 0) 35%, rgba(30, 45, 70, 0.93) 94.07%);
-}
-
-
-
-.bg-offcanvas{
-  position: relative;
-    &::before {
-      position: absolute;
-      background: $gray-300;
-      content: "";
-      height: 100%;
-      width: 1000%;
-      margin-left: -1000%;
-      margin-right: -1000%;
-  }
 }

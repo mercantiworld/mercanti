@@ -7,19 +7,15 @@
 }
 html {
   scroll-behavior: smooth;
-  -webkit-overflow-scrolling: smooth;
   scroll-padding-top: $top-nav-height + 2;
-}
-
-main{
-  background-image: url('../img/gallery/bg.png');
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
-  background-image: linear-gradient(180deg, #FFF7E7 0%, #FFF1DC 100%);
+  // color: $gray-1000;
+  font-family:$font-family-sans-serif;
 }
 
 pre, code {
@@ -62,9 +58,3 @@ label{
   margin-bottom: map-get($spacers, 2);
 }
 
-// Lists
-
-ol,
-ul {
-  padding-left: 1.1rem;
-}

@@ -3,10 +3,7 @@
 /* -------------------------------------------------------------------------- */
 
 .badge {
-  font-weight: $font-weight-medium;
-  @include border-radius (0);
-  @include font-size($font-size-base);
-  padding: .58rem 1.8rem;
+  line-height: 0.8125rem;
 }
 
 .badge-circle {
