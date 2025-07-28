@@ -5,87 +5,114 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mercantiworld</title>
+    
+    <!-- Favicons -->
     <link rel="icon" href="assets/img/favicons/logo-icon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/logo-icon.png">
-    <link rel="icon" type="image/png" href="assets/img/favicons/logo-icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/logo-icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/logo-icon.png">
     <link rel="manifest" href="assets/img/favicons/manifest.json">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
     <meta name="theme-color" content="#ffffff">
+    
+    <!-- Stylesheets -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    <link href="assets/css/theme.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link href="vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/theme.css" rel="stylesheet">
     
     <style>
       html, body {
         font-family: 'Raleway', Arial, sans-serif !important;
       }
+      
       .img-no-margin {
         margin-bottom: 0 !important;
         display: block;
         max-width: 80%;
         height: auto;
       }
+      
       .text-below-image {
         margin-top: 0 !important;
         padding-top: 0 !important;
       }
+      
       .text-below-image p {
         margin-bottom: 0.5rem;
       }
+      
       .move-up {
         margin-top: -50px;
       }
     </style>
   </head>
 
-
   <body data-bs-spy="scroll" data-bs-target="#navbar">
     <main class="main" id="top">
+      <!-- Navbar -->
       <div class="container-fluid d-flex align-items-center py-2">
-       <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <img class="logo pt-3" src="assets/img/logo.png" alt="open enterprise" style="height: 60px;" />
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img class="logo pt-3" src="assets/img/logo.png" alt="Mercantiworld logo" style="height: 60px;">
           <span class="ms-2 d-sm-block fw-medium fs-6" style="color: var(--bs-dark-orange);">mercantiworld</span>
         </a>
-
-
       </div>
+      
+      <!-- Hero Section -->
       <section class="pt-3 py-lg-0" id="hero">
         <div class="container-xxl">
           <div class="row align-items-start">
+            <!-- Left Column - Logo and Contact -->
             <div class="col-lg-5 order-lg-1 text-center move-up">
-              <img class="img-fluid" style="width: 70%;" src="assets/img/logo.png" alt="" />
+              <img class="img-fluid" style="width: 70%;" src="assets/img/logo.png" alt="Mercanti logo">
               <div class="text-below-image mt-3">
                 <p class="fs-4 fw-medium fs-md-5 lh-sm" style="font-family: raleway;">Curious about Mercanti world?</p>
-                <p class="fs-4 fs-md-5 lh-sm mt-3" style="font-family: raleway;">We'd love to hear from you: <a href="mailto:contact@mercantiworld.com" style="color: var(--bs-dark-orange); text-decoration: none;">contact@mercantiworld.com</a></p>
+                <p class="fs-4 fs-md-5 lh-sm mt-3" style="font-family: raleway;">
+                  We'd love to hear from you: 
+                  <a href="mailto:contact@mercantiworld.com" style="color: var(--bs-dark-orange); text-decoration: none;">
+                    contact@mercantiworld.com
+                  </a>
+                </p>
               </div>
             </div>
+            
+            <!-- Right Column - Main Content -->
             <div class="col-lg-7 mt-5 mt-lg-0">
-              <h1 class="lh-sm font-cursive fw-medium fs-6 fs-sm-8 fs-md-11 fs-lg-9 fs-xl-11 fs-xxl-12" style="font-family: raleway;">Webshops made easy <br class="d.none d-xl-block" /></h1>
-              <p class="mt-4 fs-2 fs-md-4 lh-sm" style="font-family: raleway;">Mercanti makes selling online feel like magic — no code, no stress, just your products out in the world. Whether you're slinging snacks or selling sneakers,</p>
-              <p class="mt-4 fs-2 fs-md-4 lh-sm" style="font-family: raleway;">Mercanti helps you trade smarter and sell everywhere. It's your store, your rules — we just make it ridiculously simple</p>
-              <br />
-               <div class="">
+              <h1 class="lh-sm font-cursive fw-medium fs-6 fs-sm-8 fs-md-11 fs-lg-9 fs-xl-11 fs-xxl-12" style="font-family: raleway;">
+                Webshops made easy <br class="d-none d-xl-block">
+              </h1>
+              <p class="mt-4 fs-2 fs-md-4 lh-sm" style="font-family: raleway;">
+                Mercanti makes selling online feel like magic — no code, no stress, just your products out in the world. Whether you're slinging snacks or selling sneakers,
+              </p>
+              <p class="mt-4 fs-2 fs-md-4 lh-sm" style="font-family: raleway;">
+                Mercanti helps you trade smarter and sell everywhere. It's your store, your rules — we just make it ridiculously simple
+              </p>
+              
+              <!-- Video Section -->
+              <div class="mt-5">
                 <div class="row">
                   <div class="col-md-6 mb-4">
                     <p class="mt-1 fs-2 fs-md-4" style="font-family: raleway;">The customer experience</p>
-                    <iframe src="https://www.loom.com/embed/50a9a1a72c114875bc2abbc3b3a19bea"  
-                          frameborder="0" 
-                          webkitallowfullscreen 
-                          mozallowfullscreen 
-                          allowfullscreen 
-                          style="width: 100%; height: 300px; color: var(--bs-dark-orange); border-radius: 10px">
+                    <iframe 
+                      src="https://www.loom.com/embed/50a9a1a72c114875bc2abbc3b3a19bea"
+                      title="Customer Experience Video"
+                      webkitallowfullscreen 
+                      mozallowfullscreen 
+                      allowfullscreen 
+                      style="width: 100%; height: 300px; border: none; border-radius: 10px;">
                     </iframe>
                   </div>
                   <div class="col-md-6 mb-4">
                     <p class="mt-1 fs-2 fs-md-4" style="font-family: raleway;">The owner experience</p>
-                    <iframe src="https://www.loom.com/embed/1eccf773c488448186b8e82f335423ab"  
-                          frameborder="0" 
-                          webkitallowfullscreen 
-                          mozallowfullscreen 
-                          allowfullscreen 
-                          style="width: 100%; height: 300px; color: var(--bs-dark-orange); border-radius: 10px">
+                    <iframe 
+                      src="https://www.loom.com/embed/1eccf773c488448186b8e82f335423ab"
+                      title="Owner Experience Video"
+                      webkitallowfullscreen 
+                      mozallowfullscreen 
+                      allowfullscreen 
+                      style="width: 100%; height: 300px; border: none; border-radius: 10px;">
                     </iframe>
                   </div>
                 </div>
@@ -96,15 +123,11 @@
       </section>
     </main>
 
+    <!-- Scripts -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="build/vendors/@popperjs/popper.min.js"></script>
     <script src="bootstrap/bootstrap.min.js"></script>
     <script src="build/vendors/is/is.min.js"></script>
-    <script src="build/vendors/@popperjs/popper.min.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="assets/js/theme.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&amp;family=Roboto:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet">
   </body>
-
 </html>
