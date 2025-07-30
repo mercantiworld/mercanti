@@ -47,6 +47,24 @@
       .move-up {
         margin-top: -50px;
       }
+
+      /* Media query for small screens */
+      @media (max-width: 991.98px) {
+        .contact-section {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: #fef8e9;
+          padding: 1rem;
+          box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+          z-index: 1000;
+        }
+        
+        .main-content {
+          padding-bottom: 120px; /* Add space for fixed contact section */
+        }
+      }
     </style>
   </head>
 
@@ -65,10 +83,10 @@
         <div class="container-xxl">
           <div class="row align-items-start">
             <!-- Left Column - Logo and Contact -->
-            <div class="col-lg-5 order-lg-1 text-center move-up">
-              <img class="img-fluid" style="width: 70%;" src="assets/img/logo.png" alt="Mercanti logo">
-              <div class="text-below-image mt-3">
-                <p class="fs-4 fw-medium fs-md-5 lh-sm" style="font-family: raleway;">Curious about Mercanti world?</p>
+             <div class="col-lg-5 order-lg-1 text-center move-up">
+              <img class="img-fluid mt-3" style="width: 70%;" src="assets/img/logo.png" alt="Mercanti logo">
+              <div class="text-below-image mt-3 contact-section">
+                <p class="fs-4 fw-medium fs-md-5 lh-sm mt-3" style="font-family: raleway;">Curious about Mercanti world?</p>
                 <p class="fs-4 fs-md-5 lh-sm mt-3" style="font-family: raleway;">
                   We'd love to hear from you: 
                   <a href="mailto:contact@mercantiworld.com" style="color: var(--bs-dark-orange); text-decoration: none;">
@@ -79,7 +97,7 @@
             </div>
             
             <!-- Right Column - Main Content -->
-            <div class="col-lg-7 mt-5 mt-lg-0">
+            <div class="col-lg-7 mt-lg-0 main-content">
               <h1 class="lh-sm font-cursive fw-medium fs-6 fs-sm-8 fs-md-11 fs-lg-9 fs-xl-11 fs-xxl-12" style="font-family: raleway;">
                 Webshops made easy <br class="d-none d-xl-block">
               </h1>
