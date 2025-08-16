@@ -112,7 +112,7 @@
         z-index: 3000 !important;
       }
       .modal {
-        background: #fff;
+        background: #fef8e9;;
         border-radius: 20px;
         padding: 2rem;
         max-width: 600px;
@@ -140,6 +140,10 @@
         border: none;
         font-size: 1.5rem;
         cursor: pointer;
+      }
+      .modal-body {
+        max-height: 80vh;
+        overflow-y: auto;
       }
       .modal-body label {
         font-weight: 500;
@@ -291,6 +295,10 @@
               <div>
                 <label for="email">Work email</label>
                 <input id="email" name="email" type="email" required autocomplete="email" />
+              </div>
+              <div>
+                <label for="email">Your phone number</label>
+                <input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="123-456-7890" />
               </div>
             </div>
             <div class="row two">
