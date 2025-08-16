@@ -99,12 +99,17 @@
         position: fixed;
         inset: 0;
         background: rgba(0,0,0,0.5);
-        z-index: 2000;
+        z-index: 3000 !important;
         justify-content: center;
         align-items: center;
       }
       .modal-backdrop[aria-hidden="false"] {
-        display: flex;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        z-index: 3000 !important;
       }
       .modal {
         background: #fff;
@@ -114,6 +119,9 @@
         width: 90%;
         box-shadow: 0 4px 20px rgba(0,0,0,0.2);
         font-family: 'Raleway', sans-serif;
+        z-index: 3100 !important;
+        position: relative;
+        display: block;
       }
       .modal-header {
         display: flex;
@@ -174,6 +182,10 @@
         .main-content {
           padding-bottom: 120px; /* Add space for fixed contact section */
         }
+      }
+
+      .contact-section.modal-open {
+        display: none !important;
       }
     </style>
   </head>
@@ -339,11 +351,13 @@
           modal.setAttribute('aria-hidden', 'false');
           setTimeout(() => document.getElementById('name').focus(), 50);
           document.body.style.overflow = 'hidden';
+          document.querySelector('.contact-section')?.classList.add('modal-open');
         }
         function closeModal() {
           modal.setAttribute('aria-hidden', 'true');
           openBtn.focus();
           document.body.style.overflow = '';
+          document.querySelector('.contact-section')?.classList.remove('modal-open');
         }
 
         if (openBtn) openBtn.addEventListener('click', openModal);
@@ -379,12 +393,5 @@
         }
       });
     </script>
-  </body>  <style>
-    /* ...existing code... */
-    .modal-backdrop[aria-hidden="false"] {
-      display: flex !important;
-      align-items: center;
-      justify-content: center;
-    }
-  </style>
+  </body>
 </html>
