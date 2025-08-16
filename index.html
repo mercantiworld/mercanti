@@ -400,17 +400,25 @@
         if (form) {
           form.addEventListener('submit', function(e) {
             e.preventDefault();
+            const data = Object.fromEntries(new FormData(form).entries());
             fetch(form.action, {
               method: 'POST',
-              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-              body: new URLSearchParams(new FormData(form)).toString()
-            }).then(res => {
-              if (res.ok) {
-                window.location.href = '/thank-you?next=onboarding';
-              } else {
-                alert('Something went wrong. Please try again or email hello@mercantiworld.com');
-              }
-            }).catch(() => alert('Network error. Please try again.'));
+              headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+              body: JSON.stringify(data)
+            }).then(res => res.json())
+              .then(data => {
+                if (data.ok) {
+                  document.getElementById('formSuccess').style.display = 'block';
+                  document.getElementById('formError').style.display = 'none';
+                  form.reset();
+                } else {
+                  document.getElementById('formSuccess').style.display = 'none';
+                  document.getElementById('formError').style.display = 'block';
+                }
+              }).catch(() => {
+                document.getElementById('formSuccess').style.display = 'none';
+                document.getElementById('formError').style.display = 'block';
+              });
           });
         }
       });
