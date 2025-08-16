@@ -27,28 +27,142 @@
       html, body {
         font-family: 'Raleway', Arial, sans-serif !important;
       }
-      
       .img-no-margin {
         margin-bottom: 0 !important;
         display: block;
         max-width: 80%;
         height: auto;
       }
-      
       .text-below-image {
         margin-top: 0 !important;
         padding-top: 0 !important;
       }
-      
       .text-below-image p {
         margin-bottom: 0.5rem;
       }
-      
       .move-up {
         margin-top: -50px;
       }
-
-      /* Media query for small screens */
+      /* New CTA & Modal styling to match brand */
+      .cta-section {
+        background: #fef8e9;
+        padding: 3rem 1rem;
+        text-align: center;
+        border-radius: 20px;
+        margin-top: 4rem;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      }
+      .cta-section h1 {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        color: var(--bs-dark-orange);
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      .cta-section p {
+        font-size: 1.25rem;
+        color: #333;
+        margin-bottom: 2rem;
+      }
+      .cta-section .btn {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        border-radius: 10px;
+        padding: 0.75rem 1.5rem;
+      }
+      .btn-primary {
+        background-color: var(--bs-dark-orange);
+        border: none;
+      }
+      .btn-primary:hover {
+        background-color: #d45a00;
+      }
+      .btn-ghost {
+        background: transparent;
+        border: 2px solid var(--bs-dark-orange);
+        color: var(--bs-dark-orange);
+        margin-left: 1rem;
+      }
+      .btn-ghost:hover {
+        background-color: var(--bs-dark-orange);
+        color: #fff;
+      }
+      /* Modal styling */
+      .modal-backdrop {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 3000 !important;
+        justify-content: center;
+        align-items: center;
+      }
+      .modal-backdrop[aria-hidden="false"] {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        z-index: 3000 !important;
+      }
+      .modal {
+        background: #fef8e9;
+        border-radius: 20px;
+        padding: 2rem;
+        max-width: 600px;
+        width: 90%;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        font-family: 'Raleway', sans-serif;
+        z-index: 3100 !important;
+        position: relative;
+        display: block;
+      }
+      .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #f2f2f2;
+        margin-bottom: 1rem;
+      }
+      .modal-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--bs-dark-orange);
+      }
+      .close-btn {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+      .modal-body {
+        max-height: 80vh;
+        overflow-y: auto;
+      }
+      .modal-body label {
+        font-weight: 500;
+        margin-bottom: 0.25rem;
+        display: block;
+      }
+      .modal-body input, .modal-body select, .modal-body textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        font-family: 'Raleway', sans-serif;
+      }
+      .actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+      .help {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 0.5rem;
+      }
       @media (max-width: 991.98px) {
         .contact-section {
           position: fixed;
@@ -60,14 +174,23 @@
           box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
           z-index: 1000;
         }
-        
         .main-content {
-          padding-bottom: 120px; /* Add space for fixed contact section */
+          padding-bottom: 120px;
         }
+      }
+      .contact-section.modal-open {
+        display: none !important;
+      }
+      .video-modal-body {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+      .video-block {
+        width: 100%;
       }
     </style>
   </head>
-
   <body data-bs-spy="scroll" data-bs-target="#navbar">
     <main class="main" id="top">
       <!-- Navbar -->
@@ -77,17 +200,16 @@
           <span class="ms-2 d-sm-block fw-medium fs-6" style="color: var(--bs-dark-orange);">mercantiworld</span>
         </a>
       </div>
-      
       <!-- Hero Section -->
       <section class="pt-3 py-lg-0" id="hero">
         <div class="container-xxl">
           <div class="row align-items-start">
             <!-- Left Column - Logo and Contact -->
-             <div class="col-lg-5 order-lg-1 text-center move-up">
+            <div class="col-lg-5 order-lg-1 text-center move-up">
               <img class="img-fluid mt-3" style="width: 70%;" src="assets/img/logo.png" alt="Mercanti logo">
               <div class="text-below-image mt-3 contact-section">
-                <p class="fs-4 fw-medium fs-md-5 lh-sm mt-3" style="font-family: raleway;">Curious about Mercanti world?</p>
-                <p class="fs-4 fs-md-5 lh-sm mt-3" style="font-family: raleway;">
+                <p class="fs-4 fw-medium fs-md-5 lh-sm mt-3">Curious about Mercantiworld?</p>
+                <p class="fs-4 fs-md-5 lh-sm mt-3">
                   We'd love to hear from you: 
                   <a href="mailto:contact@mercantiworld.com" style="color: var(--bs-dark-orange); text-decoration: none;">
                     contact@mercantiworld.com
@@ -95,52 +217,203 @@
                 </p>
               </div>
             </div>
-            
             <!-- Right Column - Main Content -->
             <div class="col-lg-7 mt-lg-0 main-content">
               <h1 class="lh-sm font-cursive fw-medium fs-6 fs-sm-8 fs-md-11 fs-lg-9 fs-xl-11 fs-xxl-12" style="font-family: raleway;">
                 Webshops made easy <br class="d-none d-xl-block">
               </h1>
               <p class="mt-4 fs-2 fs-md-4 lh-sm" style="font-family: raleway;">
-                Mercanti makes selling online feel like magic — no code, no stress, just your products out in the world. Whether you're slinging snacks or selling sneakers,
+                Mercantiworld makes selling online feel like magic no code, no stress, just your products out in the world. Whether you're slinging snacks or selling sneakers,
               </p>
               <p class="mt-4 fs-2 fs-md-4 lh-sm" style="font-family: raleway;">
-                Mercanti helps you trade smarter and sell everywhere. It's your store, your rules — we just make it ridiculously simple
+                Mercantiworld helps you trade smarter and sell everywhere. It's your store, your rules we just make it ridiculously simple
               </p>
-              
-              <!-- Video Section -->
-              <div class="mt-5">
-                <div class="row">
-                  <div class="col-md-6 mb-4">
-                    <p class="mt-1 fs-2 fs-md-4" style="font-family: raleway;">The customer experience</p>
-                    <iframe 
-                      src="https://www.loom.com/embed/50a9a1a72c114875bc2abbc3b3a19bea"
-                      title="Customer Experience Video"
-                      webkitallowfullscreen 
-                      mozallowfullscreen 
-                      allowfullscreen 
-                      style="width: 100%; height: 300px; border: none; border-radius: 10px;">
-                    </iframe>
-                  </div>
-                  <div class="col-md-6 mb-4">
-                    <p class="mt-1 fs-2 fs-md-4" style="font-family: raleway;">The owner experience</p>
-                    <iframe 
-                      src="https://www.loom.com/embed/1eccf773c488448186b8e82f335423ab"
-                      title="Owner Experience Video"
-                      webkitallowfullscreen 
-                      mozallowfullscreen 
-                      allowfullscreen 
-                      style="width: 100%; height: 300px; border: none; border-radius: 10px;">
-                    </iframe>
-                  </div>
-                </div>
-              </div>
+              <p class="mt-4 fs-2 fs-md-4 lh-sm" style="font-family: raleway;">
+                Launch a beautiful online store without the hassle and bring your ideas to profit
+              </p>
+              <button class="btn btn-primary" id="openCta" aria-haspopup="dialog" aria-controls="ctaModal">
+                Get Started and Launch Your Store Now
+              </button>
+              <button class="btn btn-ghost" id="demoLink" type="button">See a live demo</button>
             </div>
           </div>
         </div>
       </section>
     </main>
-
+    <!-- Modal -->
+    <div class="modal-backdrop" id="ctaModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle">
+      <div class="modal">
+        <div class="modal-header">
+          <h2 id="modalTitle" class="modal-title">Tell us a bit about your store</h2>
+          <button class="close-btn" aria-label="Close" id="closeCta">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form id="leadForm" action="https://formspree.io/f/myzpayld" method="POST">
+            <div class="row two">
+              <div>
+                <label for="name">Your name</label>
+                <input id="name" name="name" type="text" required autocomplete="name" />
+              </div>
+              <div>
+                <label for="email">Work email</label>
+                <input id="email" name="email" type="email" required autocomplete="email" />
+              </div>
+              <div>
+                <label for="phone">Your phone number</label>
+                <input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="123-456-7890" />
+              </div>
+            </div>
+            <div class="row two">
+              <div>
+                <label for="business">Business name</label>
+                <input id="business" name="business" type="text" autocomplete="organization" />
+              </div>
+              <div>
+                <label for="website">Website (optional)</label>
+                <input id="website" name="website" type="url" placeholder="https://…" />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <label for="category">What are you selling?</label>
+                <select id="category" name="category" required>
+                  <option value="" disabled selected>Select a category</option>
+                  <option>Food & drink</option>
+                  <option>Fashion & accessories</option>
+                  <option>Beauty & wellness</option>
+                  <option>Home & lifestyle</option>
+                  <option>Arts & crafts</option>
+                  <option>Electronics</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <label for="notes">Anything else we should know? <span class="help">(optional)</span></label>
+                <textarea id="notes" name="notes" rows="3" placeholder="e.g., number of products, timelines, special requirements"></textarea>
+              </div>
+            </div>
+            <!-- Success and error messages go here -->
+            <p id="formSuccess" style="display:none; color:green; margin-top:10px;">
+              ✅ Thank you for reaching out! We’ve received your message and will get back to you soon.
+            </p>
+            <p id="formError" style="display:none; color:red; margin-top:10px;">
+              ❌ Oops! Something went wrong. Please try again.
+            </p>
+            <div class="actions">
+              <button type="button" class="btn" id="cancelBtn">Cancel</button>
+              <button type="submit" class="btn btn-primary">Send & Continue</button>
+            </div>
+            <p class="help">By submitting, you agree to our <a href="/terms" target="_blank" rel="noopener">Terms</a> and <a href="/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+            <input type="hidden" name="utm_source" id="utm_source">
+            <input type="hidden" name="utm_medium" id="utm_medium">
+            <input type="hidden" name="utm_campaign" id="utm_campaign">
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Video Modal -->
+    <div class="modal-backdrop" id="videoModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="videoModalTitle">
+      <div class="modal">
+        <div class="modal-header">
+          <h2 id="videoModalTitle" class="modal-title">Live demo examples</h2>
+          <button class="close-btn" aria-label="Close" id="closeVideo">&times;</button>
+        </div>
+        <div class="modal-body video-modal-body">
+          <div class="video-block mb-4">
+            <p class="mt-1 fs-2 fs-md-4">The customer experience</p>
+            <iframe 
+              src="https://www.loom.com/embed/50a9a1a72c114875bc2abbc3b3a19bea"
+              title="Customer Experience Video"
+              webkitallowfullscreen 
+              mozallowfullscreen 
+              allowfullscreen 
+              style="width: 100%; height: 300px; border: none; border-radius: 10px;">
+            </iframe>
+          </div>
+          <div class="video-block mb-4">
+            <p class="mt-1 fs-2 fs-md-4">The owner experience</p>
+            <iframe 
+              src="https://www.loom.com/embed/1eccf773c488448186b8e82f335423ab"
+              title="Owner Experience Video"
+              webkitallowfullscreen 
+              mozallowfullscreen 
+              allowfullscreen 
+              style="width: 100%; height: 300px; border: none; border-radius: 10px;">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="bootstrap/bootstrap.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Modal open/close
+        const openBtn = document.getElementById('openCta');
+        const modal = document.getElementById('ctaModal');
+        const closeBtn = document.getElementById('closeCta');
+        const cancelBtn = document.getElementById('cancelBtn');
+        const demoBtn = document.getElementById('demoLink');
+        const videoModal = document.getElementById('videoModal');
+        const closeVideoBtn = document.getElementById('closeVideo');
+
+        function openModal() {
+          modal.setAttribute('aria-hidden', 'false');
+          setTimeout(() => document.getElementById('name').focus(), 50);
+          document.body.style.overflow = 'hidden';
+          document.querySelector('.contact-section')?.classList.add('modal-open');
+        }
+        function closeModal() {
+          modal.setAttribute('aria-hidden', 'true');
+          openBtn.focus();
+          document.body.style.overflow = '';
+          document.querySelector('.contact-section')?.classList.remove('modal-open');
+        }
+        function openVideoModal() {
+          videoModal.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        }
+        function closeVideoModal() {
+          videoModal.setAttribute('aria-hidden', 'true');
+          demoBtn.focus();
+          document.body.style.overflow = '';
+        }
+        if (openBtn) openBtn.addEventListener('click', openModal);
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+        if (modal) modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+        // Video modal events
+        if (demoBtn) demoBtn.addEventListener('click', openVideoModal);
+        if (closeVideoBtn) closeVideoBtn.addEventListener('click', closeVideoModal);
+        if (videoModal) videoModal.addEventListener('click', (e) => { if (e.target === videoModal) closeVideoModal(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeVideoModal(); });
+        // UTM passthrough
+        const params = new URLSearchParams(window.location.search);
+        ['utm_source','utm_medium','utm_campaign'].forEach(k => {
+          const el = document.getElementById(k);
+          if (el && params.get(k)) el.value = params.get(k);
+        });
+        // Form submission
+        const form = document.getElementById('leadForm');
+        if (form) {
+          form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            fetch(form.action, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: new URLSearchParams(new FormData(form)).toString()
+            }).then(res => {
+              if (res.ok) {
+                window.location.href = '/thank-you?next=onboarding';
+              } else {
+                alert('Something went wrong. Please try again or email hello@mercantiworld.com');
+              }
+            }).catch(() => alert('Network error. Please try again.'));
+          });
+        }
+      });
+    </script>
   </body>
 </html>
