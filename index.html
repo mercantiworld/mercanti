@@ -177,6 +177,21 @@
         .main-content {
           padding-bottom: 120px;
         }
+        .cta-buttons {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        #demoLink {
+          margin-top: 12px;
+          margin-left: 0;
+          width: 100%;
+          max-width: 320px;
+        }
+        #openCta {
+          width: 100%;
+          max-width: 320px;
+        }
       }
       .contact-section.modal-open {
         display: none !important;
@@ -231,10 +246,12 @@
               <p class="mt-4 fs-2 fs-md-4 lh-sm" style="font-family: raleway;">
                 Launch a beautiful online store without the hassle and bring your ideas to profit
               </p>
-              <button class="btn btn-primary" id="openCta" aria-haspopup="dialog" aria-controls="ctaModal">
-                Get Started and Launch Your Store Now
-              </button>
-              <button class="btn btn-ghost" id="demoLink" type="button">See a live demo</button>
+              <div class="cta-buttons">
+                <button class="btn btn-primary" id="openCta" aria-haspopup="dialog" aria-controls="ctaModal">
+                  Get Started and Launch Your Store Now
+                </button>
+                <button class="btn btn-ghost" id="demoLink" type="button">See a live demo</button>
+              </div>
             </div>
           </div>
         </div>
