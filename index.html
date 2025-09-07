@@ -81,7 +81,7 @@
         background: transparent;
         border: 2px solid var(--bs-dark-orange);
         color: var(--bs-dark-orange);
-        margin-left: 1rem;
+        margin-left: 1px;
       }
       .btn-ghost:hover {
         background-color: var(--bs-dark-orange);
@@ -252,7 +252,10 @@
                 <button class="btn btn-primary" id="openCta" aria-haspopup="dialog" aria-controls="ctaModal">
                   Get Started and Launch Your Store Now
                 </button>
-                <button class="btn btn-ghost" id="demoLink" type="button">See a live demo</button>
+                <button class="btn btn-ghost" id="demoLink" type="button">User experience</button>
+                <button class="btn btn-ghost" id="demoSiteBtn" type="button" onclick="window.open('https://mercantiworld-01d53331dcff.herokuapp.com', '_blank')">
+                  Demo site
+                </button>
               </div>
             </div>
           </div>
@@ -336,7 +339,7 @@
     <div class="modal-backdrop" id="videoModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="videoModalTitle">
       <div class="modal">
         <div class="modal-header">
-          <h2 id="videoModalTitle" class="modal-title">Live demo examples</h2>
+          <h2 id="videoModalTitle" class="modal-title">User experience:</h2>
           <button class="close-btn" aria-label="Close" id="closeVideo">&times;</button>
         </div>
         <div class="modal-body video-modal-body">
