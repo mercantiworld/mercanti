@@ -53,6 +53,7 @@
         margin-top: 4rem;
         box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       }
+
       .cta-section h1 {
         font-family: 'Raleway', sans-serif;
         font-weight: 600;
@@ -60,6 +61,15 @@
         font-size: 2rem;
         margin-bottom: 1rem;
       }
+
+      .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 3rem; /* Add bottom margin to prevent squashing */
+      }
+
       .cta-section p {
         font-size: 1.25rem;
         color: #333;
@@ -245,32 +255,47 @@
               <h1 class="lh-sm font-cursive fw-medium fs-6 fs-sm-8 fs-md-11 fs-lg-9 fs-xl-11 fs-xxl-12" style="font-family: raleway;">
                 Flexible e-commerce that grows with you<br class="d-none d-xl-block">
               </h1>
+              <p class="mt-4 fs-3 fs-md-3 lh-sm fw-bold" style="font-family: raleway;">Your Store and Your Rules.</p>
               <p class="mt-4 fs-2 fs-md-4 lh-sm" style="font-family: raleway;">
-               While many e-commerce platforms expect your business to fit into their rigid templates and workflows, 
-               Mercantiworld takes the opposite approach.
+                Most platforms force your business into their templates. Mercantiworld builds an online store 
+                around your brand, your workflows, and your customers with the freedom to host it yourself or let us host it for you.
               </p>
+              <br />
+              <p class="fs-4 fw-bold fs-md-5 lh-sm mt-3">Why choose Mercantiworld?</p>
+              <p class="mt-4 fs-3 fs-md-3 lh-sm fw-bold" style="font-family: raleway;">Tailored to You</p>
               <p class="mt-4 fs-2 fs-md-4 lh-sm" style="font-family: raleway;">
-                We’ve built a fully hosted, intuitive platform designed to adapt to your business 
-                not the other way around. Whether you need unique product flows, customised checkout experiences, 
-                or a store design that reflects your brand perfectly,
-                Mercantiworld gives you the freedom to shape your store to your vision.
+                No cookie-cutter themes. No compromises. Every feature, design, and workflow is shaped around your exact needs
+                so your online store reflects your brand, not the limits of a platform.
               </p>
-              <p class="mt-4 fs-2 fs-md-4 lh-sm" style="font-family: raleway;">
-                  With a bespoke foundation combined with ready-to-use tools, you get the best of both worlds:
-                  <ul class="mt-4 fs-2 fs-md-4 lh-sm" style="font-family: raleway;">
-                    <li>A store you can launch quickly.</li>
-                    <li>The flexibility to adapt and expand as your needs evolve.</li>
-                    <li>A smoother, faster shopping experience for your customers.</li>
-                  </ul>
+              <p class="mt-4 fs-3 fs-md-3 lh-sm fw-bold" style="font-family: raleway;">Full Ownership, Full Freedom</p>
+               <p class="mt-4 fs-2 fs-md-4 lh-sm" style="font-family: raleway;">
+                You decide how far you want to go. From custom checkout flows to unique product catalogs, you’re never locked into 
+                someone else’s roadmap. And unlike SaaS platforms, you own your code and your data.
               </p>
-              <p class="mt-4 fs-2 fs-md-4 lh-sm" style="font-family: raleway;">
-                Mercantiworld isn’t just another “plug-and-play” solution. It’s a platform that grows with 
-                you giving you the tailored flexibility of bespoke development without the cost and 
-                complexity of traditional enterprise projects.
-              </p>
+              <p class="mt-4 fs-3 fs-md-3 lh-sm fw-bold" style="font-family: raleway;">Hosted Your Way</p>
+              <p class="mt-4 fs-2 fs-md-4 lh-sm" style="font-family: raleway;">We’ll host and manage your platform if you want simplicity. 
+                Or, if you prefer full control, you can host it on your own infrastructure. The choice is 
+                always yours.</p>
+             <!-- <p class="mt-4 fs-3 fs-md-3 lh-sm fw-bold" style="font-family: raleway;">Seamless Integrations</p>
+              <p class="mt-4 fs-2 fs-md-4 lh-sm" style="font-family: raleway;">Whether it’s your ERP, CRM, warehouse, or marketplaces, 
+                we connect your store directly to the systems you already rely on, no plugins, no limitations.</p> -->
+              <p class="mt-4 fs-3 fs-md-3 lh-sm fw-bold" style="font-family: raleway;">Built for Growth</p>
+              <p class="mt-4 fs-2 fs-md-4 lh-sm" style="font-family: raleway;">Mercantiworld scales as you do, from thousands to millions of transactions, 
+                across brands, channels, and countries. When your business grows, your platform grows with you.</p>
+              <br />
+              <p class="fs-4 fw-bold fs-md-5 lh-sm mt-3">Designed for Businesses Who Want More</p>
+               <ul class="mt-4 fs-2 fs-md-4 lh-sm" style="font-family: raleway;">
+                  <li><strong>Retailers</strong> looking for more than a template-based shop</li>
+                  <li><strong>Brands</strong> that want custom experiences that drive loyalty.</li>
+                <!--  <li><strong>Enterprises</strong> needing deep integrations with existing systems.</li> -->
+                </ul>
+              <br />
+              <p class="fs-4 fw-bold fs-md-5 lh-sm mt-3">Let’s Build Your Store Together</p>
+              <p class="mt-4 fs-2 fs-md-4 lh-sm" style="font-family: raleway;">Your business isn’t 
+                generic. Your store shouldn’t be either.</p>
               <div class="cta-buttons">
                 <button class="btn btn-primary" id="openCta" aria-haspopup="dialog" aria-controls="ctaModal">
-                  Get Started and Launch Your Store Now
+                  Get Started & Launch your Store
                 </button>
                 <button class="btn btn-ghost" id="demoLink" type="button">User experience</button>
                 <button class="btn btn-ghost" id="demoSiteBtn" type="button" onclick="window.open('https://mercantiworld-01d53331dcff.herokuapp.com', '_blank')">
