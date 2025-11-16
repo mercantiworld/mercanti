@@ -114,7 +114,7 @@
         position: fixed;
         inset: 0;
         background: rgba(0,0,0,0.5);
-        z-index: 3000 !important;
+        z-index: 5000 !important;
         justify-content: center;
         align-items: center;
       }
@@ -124,7 +124,7 @@
         justify-content: center;
         opacity: 1 !important;
         pointer-events: auto !important;
-        z-index: 3000 !important;
+        z-index: 5000 !important;
       }
       .modal {
         background: #fef8e9;
@@ -134,7 +134,7 @@
         width: 90%;
         box-shadow: 0 4px 20px rgba(0,0,0,0.2);
         font-family: 'Raleway', sans-serif;
-        z-index: 3100 !important;
+        z-index: 5100 !important;
         position: relative;
         display: block;
       }
@@ -232,6 +232,50 @@
       .video-block {
         width: 100%;
       }
+      /* Custom Navbar Styles */
+      .custom-navbar {
+        width: 100%;
+        background: #e07a00;
+        color: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 4000;
+        font-family: 'Raleway', Arial, sans-serif;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      }
+      .custom-navbar ul {
+        margin: 0;
+        padding: 0 2rem;
+        display: flex;
+        list-style: none;
+        height: 56px;
+        align-items: center;
+        justify-content: flex-end;
+      }
+      .custom-navbar li {
+        margin-left: 2rem;
+      }
+      .custom-navbar a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: color 0.2s;
+      }
+      .custom-navbar a:hover {
+        color: #ffd699;
+      }
+      @media (max-width: 991.98px) {
+        .custom-navbar ul {
+          flex-direction: column;
+          height: auto;
+          padding: 1rem;
+        }
+        .custom-navbar li {
+          margin: 0.5rem 0;
+        }
+      }
     </style>
     
     <!-- Google tag (gtag.js) -->
@@ -327,15 +371,15 @@
                 Explore how <strong>Mercantiworld gives you bespoke e-commerce</strong> that fits your growth ambitions.
               </p>
 
-              <div class="cta-buttons">
-                <button class="btn btn-primary" id="openCta" aria-haspopup="dialog" aria-controls="ctaModal">
-                  Get Started & Launch your Store
-                </button>
-                <button class="btn btn-ghost" id="demoLink" type="button">User experience</button>
-                <button class="btn btn-ghost" id="demoSiteBtn" type="button" onclick="window.open('https://mercantiworld-webshop-demo-ee811c377a4c.herokuapp.com/', '_blank')">
-                  Demo site
-                </button>
-              </div>
+              <!-- Top Navbar -->
+              <nav class="custom-navbar">
+                <ul>
+                  <li><a href="#hero">Home</a></li>
+                  <li><a href="#ctaModal" id="openCtaNav">Get Started</a></li>
+                  <li><a href="#videoModal" id="demoLinkNav">User Experience</a></li>
+                  <li><a href="https://mercantiworld-webshop-demo-ee811c377a4c.herokuapp.com/" target="_blank">Demo Site</a></li>
+                </ul>
+              </nav>
             </div>
           </div>
         </div>
@@ -461,6 +505,20 @@
         const demoBtn = document.getElementById('demoLink');
         const videoModal = document.getElementById('videoModal');
         const closeVideoBtn = document.getElementById('closeVideo');
+
+        // Navbar modal triggers
+        document.getElementById('openCtaNav')?.addEventListener('click', function(e) {
+          e.preventDefault();
+          modal.setAttribute('aria-hidden', 'false');
+          setTimeout(() => document.getElementById('name').focus(), 50);
+          document.body.style.overflow = 'hidden';
+          document.querySelector('.contact-section')?.classList.add('modal-open');
+        });
+        document.getElementById('demoLinkNav')?.addEventListener('click', function(e) {
+          e.preventDefault();
+          videoModal.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        });
 
         function openModal() {
           modal.setAttribute('aria-hidden', 'false');
