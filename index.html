@@ -372,14 +372,20 @@
               </p>
 
               <!-- Top Navbar -->
-              <nav class="custom-navbar">
+              <nav class="custom-navbar d-none d-lg-block">
                 <ul>
                   <li><a href="#hero">Home</a></li>
                   <li><a href="#ctaModal" id="openCtaNav">Get Started</a></li>
                   <li><a href="#videoModal" id="demoLinkNav">User Experience</a></li>
-                  <li><a href="https://mercantiworld-webshop-demo-ee811c377a4c.herokuapp.com/" target="_blank">Demo Site</a></li>
+                  <li><a href="https://mercantiworld-webshop-demo-ee811c377a4c.herokuapp.com/" target="_blank" rel="noopener">Demo Site</a></li>
                 </ul>
               </nav>
+              <!-- Mobile CTA Buttons -->
+              <div class="mobile-cta-buttons d-lg-none" style="margin-top: 1rem;">
+                <button class="btn btn-primary w-100 mb-2" id="openCta">Get Started</button>
+                <button class="btn btn-ghost w-100 mb-2" id="demoLink">User Experience</button>
+                <a class="btn btn-ghost w-100" id="demoSiteBtn" href="https://mercantiworld-webshop-demo-ee811c377a4c.herokuapp.com/" target="_blank" rel="noopener">Demo Site</a>
+              </div>
             </div>
           </div>
         </div>
