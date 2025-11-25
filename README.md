@@ -38,6 +38,13 @@ This is a clean, modern landing page built with Bootstrap 5 and custom CSS. The 
 - Google Fonts - Raleway (via CDN)
 - Responsive iframe embeds for Loom videos
 
+## To check mailer modal run through a server
+```
+run python3 -m http.server
+http://localhost:8000 
+
+```
+
 ## Usage
 
 Simply open `index.html` in any modern web browser. No build process or server required.
