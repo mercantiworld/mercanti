@@ -399,7 +399,7 @@
           <button class="close-btn" aria-label="Close" id="closeCta">&times;</button>
         </div>
         <div class="modal-body">
-          <form id="leadForm" action="https://formspree.io/f/myzpayld" method="POST">
+          <form id="leadForm" action="https://formsubmit.co/enquiries@mercantiworld.com" method="POST">
             <div class="row two">
               <div>
                 <label for="name">Your name</label>
@@ -563,32 +563,7 @@
           const el = document.getElementById(k);
           if (el && params.get(k)) el.value = params.get(k);
         });
-        // Form submission
-        const form = document.getElementById('leadForm');
-        if (form) {
-          form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const data = Object.fromEntries(new FormData(form).entries());
-            fetch(form.action, {
-              method: 'POST',
-              headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-              body: JSON.stringify(data)
-            }).then(res => res.json())
-              .then(data => {
-                if (data.ok) {
-                  document.getElementById('formSuccess').style.display = 'block';
-                  document.getElementById('formError').style.display = 'none';
-                  form.reset();
-                } else {
-                  document.getElementById('formSuccess').style.display = 'none';
-                  document.getElementById('formError').style.display = 'block';
-                }
-              }).catch(() => {
-                document.getElementById('formSuccess').style.display = 'none';
-                document.getElementById('formError').style.display = 'block';
-              });
-          });
-        }
+        // Formsubmit: let the browser handle the form POST natively (no JS interception)
       });
     </script>
   </body>
