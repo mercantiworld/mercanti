@@ -297,7 +297,31 @@
         <a class="navbar-brand d-flex align-items-center" href="index.html">
         </a>
       </div>
-      <!-- Hero Section -->
+
+      <!-- Sticky Sidebar - Logo and Contact (outside sections for full-page stickiness) -->
+      <div style="position: fixed; left: 0; top: 70px; width: 100%; pointer-events: none; z-index: 100;">
+        <div class="container-xxl">
+          <div class="row">
+            <div class="col-lg-5" style="pointer-events: auto;">
+              <div class="text-center move-up">
+                <img class="img-fluid mt-3" style="width: 70%;" src="assets/img/logo.png" alt="Mercanti logo">
+                <div class="text-below-image mt-3 contact-section">
+                  <p class="fs-4 fw-medium fs-md-5 lh-sm mt-3">Curious about Mercantiworld?</p>
+                  <p class="fs-4 fs-md-5 lh-sm mt-3">
+                    We'd love to hear from you:
+                    <a href="mailto:enquiries@mercantiworld.com" style="color: var(--bs-dark-orange); text-decoration: none;">
+                      enquiries@mercantiworld.com
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add padding to main content to account for fixed sidebar -->
+      <div style="padding-left: 0; position: relative;">
       <section class="pt-3 py-lg-0" id="hero">
         <div class="container-xxl">
          <div class="d-flex align-items-center mt-5">
@@ -305,20 +329,6 @@
           <span class="ms-2 fw-medium" style="color: var(--bs-dark-orange); font-size: 2.5rem; line-height: 1;">mercantiworld</span>
          </div>
           <div class="row align-items-start">
-            <!-- Left Column - Logo and Contact -->
-            <div class="col-lg-5 order-lg-1 text-center move-up">
-              <img class="img-fluid mt-3" style="width: 70%;" src="assets/img/logo.png" alt="Mercanti logo">
-              <div class="text-below-image mt-3 contact-section">
-                <p class="fs-4 fw-medium fs-md-5 lh-sm mt-3">Curious about Mercantiworld?</p>
-                <p class="fs-4 fs-md-5 lh-sm mt-3">
-                  We'd love to hear from you:
-                  <a href="mailto:enquiries@mercantiworld.com" style="color: var(--bs-dark-orange); text-decoration: none;">
-                    enquiries@mercantiworld.com
-                  </a>
-                </p>
-              </div>
-            </div>
-
             <!-- Right Column - Main Content -->
             <div class="col-lg-7 mt-lg-0 main-content">
               <h1 class="lh-sm font-cursive fw-medium fs-6 fs-sm-8 fs-md-11 fs-lg-9 fs-xl-11 fs-xxl-12" style="font-family: raleway;">
@@ -533,6 +543,7 @@
           </div>
         </div>
       </section>
+    </div>
     </main>
     <!-- Modal -->
     <div class="modal-backdrop" id="ctaModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle">
