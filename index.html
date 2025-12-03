@@ -444,10 +444,7 @@
             <p class="fs-4 fw-bold fs-md-5 lh-sm mt-5">Ready to Explore?</p>
             <p class="mt-4 fs-2 fs-md-4 lh-sm" style="font-family: raleway;">
               If you're considering moving beyond the limitations of traditional platforms, we'd love to understand your goals.
-              Use the <strong>Get Started</strong> link above or email us at 
-              <a href="mailto:enquiries@mercantiworld.com" style="color: var(--bs-dark-orange); text-decoration: none;">
-                enquiries@mercantiworld.com
-              </a>.
+              <a href="#ctaModal" id="openCtaServices" style="color: var(--bs-dark-orange); text-decoration: none; font-weight: 600;">Get Started</a>
             </p>
           </div>
         </div>
@@ -495,17 +492,14 @@
               <li>We build a future ready platform you own and can evolve over time.</li>
             </ul>
             <p class="mt-3 fs-2 fs-md-4 lh-sm" style="font-family: raleway;">
-              No rigid templates. No vendor lock-in. No unnecessary complexity.
+              No rigid templates. No vendor lock in. No unnecessary complexity.
             </p>
 
             <br />
             <p class="fs-4 fw-bold fs-md-5 lh-sm mt-5">Get in Touch</p>
             <p class="mt-4 fs-2 fs-md-4 lh-sm" style="font-family: raleway;">
               If you're exploring what a custom e-commerce platform could unlock for your business, we'd love to talk.
-              Use the <strong>Get Started</strong> link in the navigation — or email us directly at 
-              <a href="mailto:enquiries@mercantiworld.com" style="color: var(--bs-dark-orange); text-decoration: none;">
-                enquiries@mercantiworld.com
-              </a>.
+              <a href="#ctaModal" id="openCtaAbout" style="color: var(--bs-dark-orange); text-decoration: none; font-weight: 600;">Get Started</a>
             </p>
           </div>
         </div>
@@ -645,6 +639,16 @@
           e.preventDefault();
           videoModal.setAttribute('aria-hidden', 'false');
           document.body.style.overflow = 'hidden';
+        });
+
+        // Section CTA links (Services & About)
+        document.getElementById('openCtaServices')?.addEventListener('click', function(e) {
+          e.preventDefault();
+          openModal();
+        });
+        document.getElementById('openCtaAbout')?.addEventListener('click', function(e) {
+          e.preventDefault();
+          openModal();
         });
 
         function openModal() {
