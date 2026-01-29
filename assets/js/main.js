@@ -2,6 +2,39 @@ document.addEventListener('DOMContentLoaded', function() {
   // Navbar toggle functionality
   const navbarToggle = document.getElementById('navbarToggle');
   const navbarMenu = document.getElementById('navbarMenu');
+
+  // Cookie Consent Popup
+  const cookieConsent = document.getElementById('cookieConsent');
+  const acceptCookies = document.getElementById('acceptCookies');
+  // Cookie Policy Modal
+  const cookiePolicyModal = document.getElementById('cookiePolicyModal');
+  const closeCookiePolicy = document.getElementById('closeCookiePolicy');
+  // Find the 'Learn more' link inside the cookie consent
+  const learnMoreLink = cookieConsent?.querySelector('a');
+
+  if (learnMoreLink && cookiePolicyModal && closeCookiePolicy) {
+    learnMoreLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      cookiePolicyModal.style.display = 'flex';
+    });
+    closeCookiePolicy.addEventListener('click', function() {
+      cookiePolicyModal.style.display = 'none';
+    });
+    // Optional: close modal when clicking backdrop
+    cookiePolicyModal.querySelector('.cookie-policy-modal__backdrop').addEventListener('click', function() {
+      cookiePolicyModal.style.display = 'none';
+    });
+  }
+  if (cookieConsent && acceptCookies) {
+    // Check if consent already given
+    if (!localStorage.getItem('cookieAccepted')) {
+      cookieConsent.style.display = 'flex';
+    }
+    acceptCookies.addEventListener('click', function() {
+      localStorage.setItem('cookieAccepted', 'yes');
+      cookieConsent.style.display = 'none';
+    });
+  }
   
   if (navbarToggle) {
     navbarToggle.addEventListener('click', function() {
