@@ -49,10 +49,7 @@
 .qa-list {
   max-width: 800px;
   margin: 0 auto;
-  color: var(--bs-brown) !important;
-}
-.qa-list, .qa-list * {
-  color: var(--bs-brown) !important;
+  color: var(--bs-brown);
 }
   display: none;
 }
