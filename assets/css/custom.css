@@ -38,6 +38,22 @@
   font-size: 1rem;
 }
 .cookie-consent {
+
+/* Q&A Page Styles */
+.qa-title {
+  color: var(--bs-dark-orange);
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+}
+.qa-list {
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--bs-brown) !important;
+}
+.qa-list, .qa-list * {
+  color: var(--bs-brown) !important;
+}
   display: none;
 }
 html, body {
