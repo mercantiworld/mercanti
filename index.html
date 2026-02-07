@@ -33,6 +33,11 @@
     <meta property="og:image" content="https://mercantiworld.com/assets/img/og-image.jpg">
     <meta property="og:url" content="https://mercantiworld.com">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Mercantiworld">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Mercantiworld">
+    <link rel="canonical" href="https://mercantiworld.com">
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4KB3B9XTDG"></script>
@@ -42,6 +47,47 @@
       gtag('js', new Date());
 
       gtag('config', 'G-4KB3B9XTDG');
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Mercantiworld",
+      "url": "https://mercantiworld.com",
+      "logo": "https://mercantiworld.com/assets/img/logo.png",
+      "description": "Bespoke e-commerce platform for independent brands and small businesses",
+      "contact": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "email": "enquiries@mercantiworld.com"
+      }
+    }
+    </script>
+
+    <!-- SoftwareApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Mercantiworld",
+      "description": "Bespoke e-commerce platform with custom reporting and no vendor lock-in",
+      "applicationCategory": "BusinessApplication",
+      "url": "https://mercantiworld.com",
+      "offers": {
+        "@type": "Offer",
+        "price": "Contact for pricing",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Bespoke e-commerce",
+        "Custom reporting",
+        "No vendor lock-in",
+        "Full localization support",
+        "Brand-focused commerce"
+      ]
+    }
     </script>
   </head>
   
