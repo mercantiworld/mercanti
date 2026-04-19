@@ -4,3 +4,12 @@ Disallow: /admin
 Disallow: /private
 
 Sitemap: https://mercantiworld.com/sitemap.xml
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
